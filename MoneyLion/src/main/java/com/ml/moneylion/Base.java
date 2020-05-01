@@ -1,7 +1,6 @@
 package com.ml.moneylion;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ml.moneylion.stepdefinitions.ServiceHooks;

@@ -16,6 +16,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.cucumber.core.api.Scenario;
 import io.cucumber.java.After;
@@ -46,9 +47,9 @@ public class ServiceHooks {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, propFile.getProperty("deviceName"));
-		capabilities.setCapability(MobileCapabilityType.UDID, propFile.getProperty("udid"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, propFile.getProperty("platformName"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, propFile.getProperty("platformVersion"));
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("automationName"));
 		capabilities.setCapability(MobileCapabilityType.APP,
 				baseDir + "/src/test/resources/apps/" + propFile.getProperty("appPath"));
 
@@ -65,6 +66,9 @@ public class ServiceHooks {
 				driver = new AndroidDriver<MobileElement>(new URL("http://" + IPAddress + ":" + port + "/wd/hub"),
 						capabilities);
 			} else {
+				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("XCUITEST"));
+				capabilities.setCapability(MobileCapabilityType.UDID, propFile.getProperty("udid"));
+				capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, propFile.getProperty("bundleid"));
 				driver = new IOSDriver<MobileElement>(new URL("http://" + IPAddress + ":" + port + "/wd/hub"),
 						capabilities);
 			}
@@ -80,7 +84,12 @@ public class ServiceHooks {
 	public void closeSession(Scenario scenario) {
 		UtilityMethods.takeScreenShot(scenario, scenario.getName());
 		// driver.removeApp(propFile.getProperty("appPackage"));
-		driver.quit();
-		server.stopServer();
+		if (driver != null) {
+			driver.quit();
+		}
+		if (server != null) {
+			server.stopServer();
+		}
 	}
+	
 }
