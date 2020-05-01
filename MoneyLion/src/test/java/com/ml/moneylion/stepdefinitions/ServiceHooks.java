@@ -49,9 +49,10 @@ public class ServiceHooks {
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, propFile.getProperty("deviceName"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, propFile.getProperty("platformName"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, propFile.getProperty("platformVersion"));
-		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("automationName"));
+		//capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("automationName"));
 		capabilities.setCapability(MobileCapabilityType.APP,
 				baseDir + "/src/test/resources/apps/" + propFile.getProperty("appPath"));
+		
 
 		if (propFile.getProperty("appType").equalsIgnoreCase("web")) {
 			capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, propFile.getProperty("browserName"));
@@ -75,8 +76,7 @@ public class ServiceHooks {
 			logger.info("Application is launched successfully");
 		} catch (SessionNotCreatedException session) {
 			session.printStackTrace();
-			Assert.assertTrue(false,
-					"Unable to create session, please check capabilities or requested port might be in use");
+			Assert.assertTrue(false,"Unable to create session, please check capabilities or requested port might be in use");
 		}
 	}
 

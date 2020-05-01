@@ -44,9 +44,9 @@ public class CucumberFeatureManager {
 	@AfterClass
 	public void tearDownClass() {
 		testNGCucumberRunner.finish();
-		File reportOutputDirectory = new File("target/cucumber-reports");
+		File reportOutputDirectory = new File("reports/cucumber-reports");
 		List<String> jsonFiles = new ArrayList<String>();
-		jsonFiles.add("target/cucumber-reports/cucumber-html-report.json");
+		jsonFiles.add("reports/cucumber-reports/cucumber-html-report.json");
 		String path = System.getProperty("user.dir") + "/src/main/java/com/ml/moneylion";
 		PropertiesFile propFile = new PropertiesFile(path + "/config/reportconfig.properties");
 		String buildNumber = propFile.getProperty("BuildNumber");

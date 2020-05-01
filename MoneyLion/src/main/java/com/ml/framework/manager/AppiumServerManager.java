@@ -34,9 +34,6 @@ public class AppiumServerManager {
 		service = AppiumDriverLocalService.buildService(builder);
 		service.start();
 		logger.info("Appium Server is started successfully");
-		if (service == null || checkServerRunningStatus()) {
-			throw new AppiumServerHasNotBeenStartedLocallyException("Malaysia-: An Appium server node is not started!");
-		}
 	}
 
 	private boolean checkServerRunningStatus() {

@@ -1,10 +1,10 @@
-@fields
+@fieldsValidations
 Feature: Verify Drop down-AplaNumericField-Numeric fields
 
   @dropDown
   Scenario Outline: Verify Drop down Selection
     Given user launch application
-    When  user accept application permissions "USD" "Create default accounts" "Disable crash reports"
+    When  user accept application permissions "USD" "Let me handle it" "Disable crash reports"
     Then  user should see the dash board screen
     And   user tap on plus icon to create new account
     And   user fills new account name field with "<accountName>"
@@ -17,7 +17,7 @@ Feature: Verify Drop down-AplaNumericField-Numeric fields
   @aplhaNumeric
   Scenario Outline: Verify alphaNumeric input field
     Given user launch application
-    When  user accept application permissions "USD" "Create default accounts" "Disable crash reports"
+    When  user accept application permissions "USD" "Let me handle it" "Disable crash reports"
     Then  user should see the dash board screen
     And   user tap on plus icon to create new account
     And   user fills new account name field with "<accountName>"

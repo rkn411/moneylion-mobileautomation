@@ -10,11 +10,11 @@ import io.cucumber.testng.CucumberOptions;
 		strict = true,
 		features = "src/test/resources/features",
 		glue = {"com.ml.moneylion.stepdefinitions"},
-		tags = {"@aplhaNumeric"},
-		plugin = {"html:target/cucumber-reports/cucumber-pretty",
-				"json:target/cucumber-reports/cucumber-html-report.json",
-				"usage:target/cucumber-reports/cucumber-usage.json",
-				"rerun:target/cucumber-reports/failedscenarios.txt" })
+		tags = {"@dropDown,@aplhaNumeric"},
+		plugin = {"html:reports/cucumber-reports/cucumber-pretty",
+				"json:reports/cucumber-reports/cucumber-html-report.json",
+				"usage:reports/cucumber-reports/cucumber-usage.json",
+				"rerun:reports/cucumber-reports/failedscenarios.txt" })
 
 public class SuiteRunner extends CucumberFeatureManager{
 

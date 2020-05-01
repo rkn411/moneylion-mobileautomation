@@ -87,7 +87,11 @@ public class GNUSetupScreen extends Base {
 	 * Clicks dismiss button in instruction pop up
 	 */
 	public void clickDismissButton() {
+		try{
 		dismissBtn.click();
+		}catch(Exception e){
+			logger.info("Specific to real devices");
+		}
 	}
 
 	/**
