@@ -18,5 +18,6 @@ private static Logger logger=Logger.getLogger(UtilityMethods.class);
 			scenario.embed(screenshot, "image/png", scenario.getName());
 		}
 	}
+	// to implement framework related common methods  here 
 
 }

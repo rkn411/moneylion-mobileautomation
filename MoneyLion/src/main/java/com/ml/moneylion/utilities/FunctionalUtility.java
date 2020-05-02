@@ -21,12 +21,9 @@ public class FunctionalUtility {
 	}
 
 	/**
-	 * Utility method to select drop down option
-	 * 
-	 * @param spinnerElement
-	 *            - Drop Down mobile element
-	 * @param dropdownOption
-	 *            - option to select in drop down
+	 * Utility method to select drop down option 
+	 * @param spinnerElement  - Drop Down mobile element
+	 * @param dropdownOption - option to select in drop down
 	 */
 	public static void selectDropDownOptions(MobileElement spinnerElement, String dropdownOption) {
 		spinnerElement.click();

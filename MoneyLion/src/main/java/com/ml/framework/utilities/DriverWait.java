@@ -13,7 +13,7 @@ public class DriverWait {
 	 * method return false otherwise return true
 	 * 
 	 * @param element
-	 *            - element to display in UAT
+	 *            - element to display 
 	 * @return boolean
 	 */
 	public static boolean isElementDisplayed(MobileElement element) {
@@ -36,7 +36,7 @@ public class DriverWait {
 	 * method return false otherwise return true
 	 * 
 	 * @param locator
-	 *            - locator to display in UAT
+	 *            - locator to display 
 	 * @return boolean
 	 */
 	public static boolean isElementDisplayed(By locator) {
@@ -57,8 +57,7 @@ public class DriverWait {
 	 * Makes web driver to wait for element is enabled, if element is enabled in 2
 	 * mints then return false
 	 * 
-	 * @param element
-	 *            - element to display in UAT
+	 * @param element - element to display
 	 * @return boolean
 	 */
 	public static boolean isElementEnabled(MobileElement element) {

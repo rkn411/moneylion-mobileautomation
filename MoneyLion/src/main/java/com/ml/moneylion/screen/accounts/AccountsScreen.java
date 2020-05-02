@@ -26,6 +26,11 @@ public class AccountsScreen extends Base {
 	@AndroidFindBy(xpath="//*[contains(@resource-id,'fragment_account_list')]//*[@resource-id='org.gnucash.android:id/primary_text']")
 	private List<MobileElement> accountList;
 	
+	@AndroidFindBy(id="org.gnucash.android:id/menu_search")
+	private MobileElement searchButton;
+	
+	@AndroidFindBy(id="org.gnucash.android:id/search_src_text")
+	private MobileElement searchInputField;
 	/**
 	 * Validates whether Accounts screen is displayed or not
 	 */
@@ -93,5 +98,21 @@ public class AccountsScreen extends Base {
 			return true;
 		}
 		return false;
+	}
+
+	/**
+	 * Clicks on search
+	 */
+	public void selectSearch() {
+		searchButton.click();
+	}
+	
+	/**
+	 * Enter text in search
+	 * @param accountName
+	 */
+	public void searchAccount(String accountName) {
+		selectSearch();
+		searchInputField.sendKeys(accountName);
 	}
 }

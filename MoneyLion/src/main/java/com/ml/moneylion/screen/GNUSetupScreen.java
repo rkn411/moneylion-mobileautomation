@@ -18,7 +18,7 @@ public class GNUSetupScreen extends Base {
 	}
 
 	@AndroidFindBy(id = "android:id/title")
-	private MobileElement welcomeTitle;
+	private MobileElement title;
 
 	@AndroidFindBy(id = "org.gnucash.android:id/btn_save")
 	private MobileElement nextBtn;
@@ -41,13 +41,12 @@ public class GNUSetupScreen extends Base {
 	 */
 	@Override
 	public void isScreenDisplayed() {
-		Assert.assertTrue(DriverWait.isElementDisplayed(welcomeTitle), "GNU Welcome screen is not displayed");
+		Assert.assertTrue(DriverWait.isElementDisplayed(title), "GNU Welcome screen is not displayed");
 		logger.info("GNU Welcome screen is displayed");
 	}
 
 	/**
 	 * Clicks on next button in setup screen
-	 * 
 	 * @return
 	 */
 	public GNUSetupScreen clickNextButton() {
@@ -57,9 +56,7 @@ public class GNUSetupScreen extends Base {
 
 	/**
 	 * This method is used to select radio buttons in GNU setup screen
-	 * 
-	 * @param radioBtnName
-	 *            - name of the radio button
+	 * @param radioBtnName- name of the radio button
 	 */
 	public void selectGNUPreSetupRadioBtns(String radioBtnName) {
 		getRadioOptions(radioBtnName).click();
@@ -87,22 +84,18 @@ public class GNUSetupScreen extends Base {
 	 * Clicks dismiss button in instruction pop up
 	 */
 	public void clickDismissButton() {
-		try{
-		dismissBtn.click();
-		}catch(Exception e){
+		try {
+			dismissBtn.click();
+		} catch (Exception e) {
 			logger.info("Specific to real devices");
 		}
 	}
 
 	/**
 	 * This method is used to set GNU launch setup
-	 * 
-	 * @param currency
-	 *            - currency
-	 * @param account
-	 *            - account option
-	 * @param feedbackOptions
-	 *            - feedback options for crash reports
+	 * @param currency- currency
+	 * @param account - account option
+	 * @param feedbackOptions - feedback options for crash reports
 	 */
 	public void gnuCashPreSetup(String currency, String account, String feedbackOptions) {
 		logger.info("Setting GNU pre setup");
@@ -114,5 +107,13 @@ public class GNUSetupScreen extends Base {
 		selectGNUPreSetupRadioBtns(feedbackOptions);
 		clickNextButton();
 		clickDoneButton();
+	}
+	/**
+	 * Validates titles of the launch setup screens
+	 * @param titleName
+	 */
+	public void validateTitle(String titleName) {
+		Assert.assertTrue(title.getText().equals(titleName), "Title is not matched "+titleName);
+		logger.info(titleName+" screen is displayed");
 	}
 }

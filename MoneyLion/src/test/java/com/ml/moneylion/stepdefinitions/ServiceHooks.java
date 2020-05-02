@@ -49,10 +49,9 @@ public class ServiceHooks {
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, propFile.getProperty("deviceName"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, propFile.getProperty("platformName"));
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, propFile.getProperty("platformVersion"));
-		//capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("automationName"));
+		// capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("automationName"));
 		capabilities.setCapability(MobileCapabilityType.APP,
 				baseDir + "/src/test/resources/apps/" + propFile.getProperty("appPath"));
-		
 
 		if (propFile.getProperty("appType").equalsIgnoreCase("web")) {
 			capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, propFile.getProperty("browserName"));
@@ -67,7 +66,7 @@ public class ServiceHooks {
 				driver = new AndroidDriver<MobileElement>(new URL("http://" + IPAddress + ":" + port + "/wd/hub"),
 						capabilities);
 			} else {
-				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,propFile.getProperty("XCUITEST"));
+				capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, propFile.getProperty("XCUITEST"));
 				capabilities.setCapability(MobileCapabilityType.UDID, propFile.getProperty("udid"));
 				capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, propFile.getProperty("bundleid"));
 				driver = new IOSDriver<MobileElement>(new URL("http://" + IPAddress + ":" + port + "/wd/hub"),
@@ -76,14 +75,15 @@ public class ServiceHooks {
 			logger.info("Application is launched successfully");
 		} catch (SessionNotCreatedException session) {
 			session.printStackTrace();
-			Assert.assertTrue(false,"Unable to create session, please check capabilities or requested port might be in use");
+			Assert.assertTrue(false,
+					"Unable to create session, please check capabilities or requested port might be in use");
 		}
 	}
 
 	@After
 	public void closeSession(Scenario scenario) {
 		UtilityMethods.takeScreenShot(scenario, scenario.getName());
-		// driver.removeApp(propFile.getProperty("appPackage"));
+		driver.removeApp(propFile.getProperty("appPackage"));
 		if (driver != null) {
 			driver.quit();
 		}
@@ -91,5 +91,5 @@ public class ServiceHooks {
 			server.stopServer();
 		}
 	}
-	
+
 }

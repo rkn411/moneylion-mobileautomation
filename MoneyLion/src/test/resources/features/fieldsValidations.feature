@@ -31,44 +31,43 @@ Feature: Verify Drop down-AplaNumericField-Numeric fields
   @numeric
   Scenario Outline: Verify numeric field Selection
     Given user launch application
-    When  user accept application permissions
+    When  user accept application permissions "USD" "Let me handle it" "Disable crash reports"
     Then  user should see the dash board screen
     And   user tap on plus icon to create new account
     And   user fills new account name field with "<accountName>"
     And   user tap on save button
     Then  user should see the "<accountName>" in dash board list
     Then  user should select account from the list "<accountName>"
+    And   user tap on plus icon to create new transaction
     Then  user fills the "<amount>" field
-    And   user should verify amount field with "<invalid>" data
-    Then  user click on spend button
+    Then  user click on save button in new transaction page
+    And   user should verify amount field allows only numberic values
 
     Examples: 
-      | accountName     | amount |  | invalid |
-      | alphanumeric123 |    500 |  | invalid |
-
+      | accountName     | amount |
+      | alphanumeric123 | 500*   |
+      
   @pageNavigations
-  Scenario Outline: Verify pageNavigation assertions
-    Given user launch application
-    When  user accept application permissions
-    Then  user should see the dash board screen
-    And   user tap on plus icon to create new account
-    And   user fills new account name field with "<accountName>"
-    And   user tap on save button
-
-    Examples: 
-      | accountName |
-      | alpha       |
+  Scenario: Verify pageNavigation assertions
+    Given  user launch application
+    When   user validates "Welcome to GnuCash" screen title
+    When   user tap on next button
+    And    user validates "Default Currency" screen title
+    When   user tap on next button
+    And    user validates "Account Setup" screen title
+    When   user tap on next button
+    And    user validates "Feedback Options" screen title
 
   @search
   Scenario Outline: Verify search field
     Given user launch application
-    When  user accept application permissions
-    Then  user should see the dash board screen
-    And   user tap on plus icon to create new account
-    And   user fills new account name field with "<accountName >"
-    And   user tap on save button
-    And   use select the search button
-    Then  user should verify the "<accountName>" in dash board list
+    When user accept application permissions "USD" "Let me handle it" "Disable crash reports"
+    Then user should see the dash board screen
+    And user tap on plus icon to create new account
+    And user fills new account name field with "<accountName>"
+    And user tap on save button
+    And user search for created account "<accountName>"
+    Then user should see the "<accountName>" in dash board list
 
     Examples: 
       | accountName     |

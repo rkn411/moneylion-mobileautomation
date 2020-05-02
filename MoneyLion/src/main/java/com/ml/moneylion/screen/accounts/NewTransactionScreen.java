@@ -19,6 +19,9 @@ public class NewTransactionScreen extends Base {
 
 	@AndroidFindBy(id = "org.gnucash.android:id/input_transaction_amount")
 	private MobileElement amountField;
+	
+	@AndroidFindBy(id="org.gnucash.android:id/input_transaction_type")
+	private MobileElement transactionType;
 
 	@AndroidFindBy(id = "org.gnucash.android:id/menu_save")
 	private MobileElement saveBtn;
@@ -29,8 +32,33 @@ public class NewTransactionScreen extends Base {
 		logger.info("New Transaction screen is displayed");
 	}
 
-	public void CreateTransaction() throws InterruptedException {
-		descritionTxtField.sendKeys("Test");
-		amountField.sendKeys("100");
+	/**
+	 * Enter data in amount field
+	 * @param amount
+	 */
+	public void enterAmount(String amount) {
+		amountField.sendKeys(amount);
+	}
+	
+	/**
+	 * Click on transaction type switch
+	 */
+	public void clickTrasactionTypeIcon() {
+		transactionType.click();
+	}
+	
+	/**
+	 * Validates screen is not changed when invalid amount is given
+	 */
+	public void verifyAmountField() {
+		isScreenDisplayed();
+		logger.info("As expected characters are not allowed in amount fiel");
+	}
+	
+	/**
+	 * Click on save button
+	 */
+	public void clickSaveButton() {
+		saveBtn.click();
 	}
 }

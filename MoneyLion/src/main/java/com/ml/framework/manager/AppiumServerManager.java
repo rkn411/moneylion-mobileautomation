@@ -5,13 +5,12 @@ import java.io.File;
 import org.testng.log4testng.Logger;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
 /**
  * This class contains utility methods for starting and stopping appium server
  * 
- * @author rk
+ * @author reddikothapalli
  *
  */
 public class AppiumServerManager {
@@ -36,14 +35,11 @@ public class AppiumServerManager {
 		logger.info("Appium Server is started successfully");
 	}
 
-	private boolean checkServerRunningStatus() {
-		return service.isRunning();
-	}
-
 	/**
 	 * Stop appium service
 	 */
 	public void stopServer() {
+		
 		service.stop();
 		logger.info("Appium Server is stopped successfully");
 	}

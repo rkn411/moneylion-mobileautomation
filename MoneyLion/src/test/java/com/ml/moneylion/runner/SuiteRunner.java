@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 		strict = true,
 		features = "src/test/resources/features",
 		glue = {"com.ml.moneylion.stepdefinitions"},
-		tags = {"@dropDown,@aplhaNumeric"},
+		tags = {"@fieldsValidations"},
 		plugin = {"html:reports/cucumber-reports/cucumber-pretty",
 				"json:reports/cucumber-reports/cucumber-html-report.json",
 				"usage:reports/cucumber-reports/cucumber-usage.json",
