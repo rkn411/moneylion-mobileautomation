@@ -18,7 +18,8 @@ Configure and Install Following Plugins
 4.In "Available plugins" tab, perform serach for "Pipeline Maven Integration" and install
 
 # Run tests:
-Clone or import project .
+Project link :https://github.com/rkn411/moneylion-mobileautomation.git
+Clone or import project /Download as zip.
 >Navigate to project root.
 >>mvn clean
 >>mvn install
