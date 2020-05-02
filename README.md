@@ -27,7 +27,11 @@ Right Click on TestRunner class and Click Run As > JUnit Test, TestngTest
 ## Import errors related to eclispe ide 
 Issues can resolve by following document in below path
 Navigate to project directory folder test-output "">> Framework Description >> .pdf"
+
 # View HTML Report
 HTML report will be generated once execution finish reports\.html
 Open Index.html in browser to see the reports
+
+## Path to Test Report file-
+/MoneyLion/reports/cucumber-reports/cucumber-html-reports
 
