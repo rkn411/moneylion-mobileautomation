@@ -1,6 +1,7 @@
 # moneylion-mobileautomation
 # cucumber-bdd-api-java-maven
-This framework can be used for Automating Rest Assured API's, using BDD approach
+
+This is common framework can be used for Automating Android,iOS apps and Rest Assured API's, using BDD approach
 
 # Environment Setup:
 Install Java JDK/JRE should be 8
@@ -21,11 +22,14 @@ Clone or import project .
 >Navigate to project root.
 >>mvn clean
 >>mvn install
-or 
+
+(or) 
+
 Right Click on TestRunner class and Click Run As > JUnit Test, TestngTest
 
 ## Import errors related to eclispe ide 
 Issues can resolve by following document in below path
+
 Navigate to project directory folder test-output "">> Framework Description >> .pdf"
 
 # View HTML Report
@@ -33,5 +37,15 @@ HTML report will be generated once execution finish reports\.html
 Open Index.html in browser to see the reports
 
 ## Path to Test Report file-
+
 /MoneyLion/reports/cucumber-reports/cucumber-html-reports
+
+
+
+# References
+http://appium.io/docs/en/about-appium/intro/
+http://rest-assured.io/  
+https://cucumber.io/docs/guides/api-automation/  
+https://dzone.com/articles/cucumber-selenium-jenkins-integration
+
 
