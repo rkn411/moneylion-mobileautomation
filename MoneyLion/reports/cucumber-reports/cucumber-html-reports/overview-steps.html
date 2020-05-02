@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+          <li role="presentation" ><a href="overview-trends.html">Trends</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>MoneyLion</td>
+        <td>1</td>
+      <td>02 May 2020, 11:02</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_click_on_save_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="528691205">0.528</td>
+              <td class="duration" data-value="528691205">0.528</td>
+              <td class="duration" data-value="528691205">0.528</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_fills_new_account_name_field_with(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="43935427">0.043</td>
+              <td class="duration" data-value="43935427">0.050</td>
+              <td class="duration" data-value="175741711">0.175</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_fills_the_field(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="549068988">0.549</td>
+              <td class="duration" data-value="549068988">0.549</td>
+              <td class="duration" data-value="549068988">0.549</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_search_for_created_account(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1677933681">1.677</td>
+              <td class="duration" data-value="1677933681">1.677</td>
+              <td class="duration" data-value="1677933681">1.677</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_selects_the_from_the_drop_down(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2623026030">2.623</td>
+              <td class="duration" data-value="2623026030">2.623</td>
+              <td class="duration" data-value="2623026030">2.623</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_should_see_the_dash_board_screen()</td>
+              <td>4</td>
+              <td class="duration" data-value="137824781">0.137</td>
+              <td class="duration" data-value="137824781">0.187</td>
+              <td class="duration" data-value="551299125">0.551</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_should_select_account_from_the_list(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="171413065">0.171</td>
+              <td class="duration" data-value="171413065">0.171</td>
+              <td class="duration" data-value="171413065">0.171</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_should_verify_amount_field_allows_only_numberic_values()</td>
+              <td>1</td>
+              <td class="duration" data-value="686710831">0.686</td>
+              <td class="duration" data-value="686710831">0.686</td>
+              <td class="duration" data-value="686710831">0.686</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_tap_on_plus_icon_to_create_new_account()</td>
+              <td>4</td>
+              <td class="duration" data-value="1192309544">1.192</td>
+              <td class="duration" data-value="1192309544">1.420</td>
+              <td class="duration" data-value="4769238177">4.769</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_tap_on_plus_icon_to_create_new_transaction()</td>
+              <td>1</td>
+              <td class="duration" data-value="2084890400">2.084</td>
+              <td class="duration" data-value="2084890400">2.084</td>
+              <td class="duration" data-value="2084890400">2.084</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">AccountStepDefinitions.user_tap_on_save_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="1448265254">1.448</td>
+              <td class="duration" data-value="1448265254">1.530</td>
+              <td class="duration" data-value="4344795764">4.344</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GnuCashSetupStepDefinitions.user_accept_application_permissions(String,String,String)</td>
+              <td>4</td>
+              <td class="duration" data-value="7264335120">7.264</td>
+              <td class="duration" data-value="7264335120">7.785</td>
+              <td class="duration" data-value="29057340483">29.057</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GnuCashSetupStepDefinitions.user_launch_application()</td>
+              <td>5</td>
+              <td class="duration" data-value="503526734">0.503</td>
+              <td class="duration" data-value="503526734">0.578</td>
+              <td class="duration" data-value="2517633673">2.517</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GnuCashSetupStepDefinitions.user_should_see_the_in_dash_board_list(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="310461328">0.310</td>
+              <td class="duration" data-value="310461328">0.729</td>
+              <td class="duration" data-value="931383986">0.931</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GnuCashSetupStepDefinitions.user_tap_on_next_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="57372455">0.057</td>
+              <td class="duration" data-value="57372455">0.059</td>
+              <td class="duration" data-value="172117365">0.172</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">GnuCashSetupStepDefinitions.user_validates_screen_title(String)</td>
+              <td>4</td>
+              <td class="duration" data-value="567433755">0.567</td>
+              <td class="duration" data-value="567433755">0.754</td>
+              <td class="duration" data-value="2269735020">2.269</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ServiceHooks.closeSession(Scenario)</td>
+              <td>5</td>
+              <td class="duration" data-value="2712882285">2.712</td>
+              <td class="duration" data-value="2712882285">3.507</td>
+              <td class="duration" data-value="13564411426">13.564</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">ServiceHooks.launchApplication(Scenario)</td>
+              <td>5</td>
+              <td class="duration" data-value="11988695570">11.988</td>
+              <td class="duration" data-value="11988695570">13.746</td>
+              <td class="duration" data-value="59943477851">59.943</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>51</td>
+            <td class="duration">2.482</td>
+            <td class="duration">59.943</td>
+            <td class="duration">2:6.618</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

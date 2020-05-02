@@ -1,0 +1,426 @@
+[
+  {
+    "source": "user launch application",
+    "steps": [
+      {
+        "name": "user launch application",
+        "aggregatedDurations": {
+          "median": 0.499481716,
+          "average": 0.503526735
+        },
+        "durations": [
+          {
+            "duration": 0.436413088,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:6"
+          },
+          {
+            "duration": 0.505588138,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:19"
+          },
+          {
+            "duration": 0.4978991,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:33"
+          },
+          {
+            "duration": 0.578251631,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:52"
+          },
+          {
+            "duration": 0.499481716,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:63"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user accept application permissions {string} {string} {string}",
+    "steps": [
+      {
+        "name": "user accept application permissions \"USD\" \"Let me handle it\" \"Disable crash reports\"",
+        "aggregatedDurations": {
+          "median": 7.105837481,
+          "average": 7.264335121
+        },
+        "durations": [
+          {
+            "duration": 7.130385151,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:7"
+          },
+          {
+            "duration": 7.081289811,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:20"
+          },
+          {
+            "duration": 7.785462707,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:34"
+          },
+          {
+            "duration": 7.060202814,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:64"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user should see the dash board screen",
+    "steps": [
+      {
+        "name": "user should see the dash board screen",
+        "aggregatedDurations": {
+          "median": 0.139595526,
+          "average": 0.137824781
+        },
+        "durations": [
+          {
+            "duration": 0.152208457,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:8"
+          },
+          {
+            "duration": 0.126982594,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:21"
+          },
+          {
+            "duration": 0.0841781,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:35"
+          },
+          {
+            "duration": 0.187929974,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:65"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user tap on plus icon to create new account",
+    "steps": [
+      {
+        "name": "user tap on plus icon to create new account",
+        "aggregatedDurations": {
+          "median": 1.122996134,
+          "average": 1.192309544
+        },
+        "durations": [
+          {
+            "duration": 1.131779607,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:9"
+          },
+          {
+            "duration": 1.420538205,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:22"
+          },
+          {
+            "duration": 1.102707704,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:36"
+          },
+          {
+            "duration": 1.114212661,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:66"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user fills new account name field with {string}",
+    "steps": [
+      {
+        "name": "user fills new account name field with \"dropdownselect\"",
+        "aggregatedDurations": {
+          "median": 0.050156195,
+          "average": 0.050156195
+        },
+        "durations": [
+          {
+            "duration": 0.050156195,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:10"
+          }
+        ]
+      },
+      {
+        "name": "user fills new account name field with \"alphanumeric123\"",
+        "aggregatedDurations": {
+          "median": 0.041271965,
+          "average": 0.041861839
+        },
+        "durations": [
+          {
+            "duration": 0.044946846,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:23"
+          },
+          {
+            "duration": 0.041271965,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:37"
+          },
+          {
+            "duration": 0.039366705,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:67"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user selects the {string} from the drop down",
+    "steps": [
+      {
+        "name": "user selects the \"USD - US Dollar\" from the drop down",
+        "aggregatedDurations": {
+          "median": 2.62302603,
+          "average": 2.623026030
+        },
+        "durations": [
+          {
+            "duration": 2.62302603,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user tap on save button",
+    "steps": [
+      {
+        "name": "user tap on save button",
+        "aggregatedDurations": {
+          "median": 1.434156221,
+          "average": 1.448265255
+        },
+        "durations": [
+          {
+            "duration": 1.379983107,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:24"
+          },
+          {
+            "duration": 1.530656436,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:38"
+          },
+          {
+            "duration": 1.434156221,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:68"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user should see the {string} in dash board list",
+    "steps": [
+      {
+        "name": "user should see the \"alphanumeric123\" in dash board list",
+        "aggregatedDurations": {
+          "median": 0.105195897,
+          "average": 0.310461329
+        },
+        "durations": [
+          {
+            "duration": 0.096211525,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:25"
+          },
+          {
+            "duration": 0.105195897,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:39"
+          },
+          {
+            "duration": 0.729976564,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:70"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user should select account from the list {string}",
+    "steps": [
+      {
+        "name": "user should select account from the list \"alphanumeric123\"",
+        "aggregatedDurations": {
+          "median": 0.171413065,
+          "average": 0.171413065
+        },
+        "durations": [
+          {
+            "duration": 0.171413065,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:40"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user tap on plus icon to create new transaction",
+    "steps": [
+      {
+        "name": "user tap on plus icon to create new transaction",
+        "aggregatedDurations": {
+          "median": 2.0848904,
+          "average": 2.084890400
+        },
+        "durations": [
+          {
+            "duration": 2.0848904,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:41"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user fills the {string} field",
+    "steps": [
+      {
+        "name": "user fills the \"500*\" field",
+        "aggregatedDurations": {
+          "median": 0.549068988,
+          "average": 0.549068988
+        },
+        "durations": [
+          {
+            "duration": 0.549068988,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:42"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user click on save button in new transaction page",
+    "steps": [
+      {
+        "name": "user click on save button in new transaction page",
+        "aggregatedDurations": {
+          "median": 0.528691205,
+          "average": 0.528691205
+        },
+        "durations": [
+          {
+            "duration": 0.528691205,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:43"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user should verify amount field allows only numberic values",
+    "steps": [
+      {
+        "name": "user should verify amount field allows only numberic values",
+        "aggregatedDurations": {
+          "median": 0.686710831,
+          "average": 0.686710831
+        },
+        "durations": [
+          {
+            "duration": 0.686710831,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:44"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user validates {string} screen title",
+    "steps": [
+      {
+        "name": "user validates \"Welcome to GnuCash\" screen title",
+        "aggregatedDurations": {
+          "median": 0.032595101,
+          "average": 0.032595101
+        },
+        "durations": [
+          {
+            "duration": 0.032595101,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:53"
+          }
+        ]
+      },
+      {
+        "name": "user validates \"Default Currency\" screen title",
+        "aggregatedDurations": {
+          "median": 0.741018449,
+          "average": 0.741018449
+        },
+        "durations": [
+          {
+            "duration": 0.741018449,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:55"
+          }
+        ]
+      },
+      {
+        "name": "user validates \"Account Setup\" screen title",
+        "aggregatedDurations": {
+          "median": 0.741273568,
+          "average": 0.741273568
+        },
+        "durations": [
+          {
+            "duration": 0.741273568,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:57"
+          }
+        ]
+      },
+      {
+        "name": "user validates \"Feedback Options\" screen title",
+        "aggregatedDurations": {
+          "median": 0.754847902,
+          "average": 0.754847902
+        },
+        "durations": [
+          {
+            "duration": 0.754847902,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:59"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user tap on next button",
+    "steps": [
+      {
+        "name": "user tap on next button",
+        "aggregatedDurations": {
+          "median": 0.057115506,
+          "average": 0.057372455
+        },
+        "durations": [
+          {
+            "duration": 0.05558717,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:54"
+          },
+          {
+            "duration": 0.059414689,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:56"
+          },
+          {
+            "duration": 0.057115506,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:58"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "user search for created account {string}",
+    "steps": [
+      {
+        "name": "user search for created account \"alphanumeric123\"",
+        "aggregatedDurations": {
+          "median": 1.677933681,
+          "average": 1.677933681
+        },
+        "durations": [
+          {
+            "duration": 1.677933681,
+            "location": "file:src/test/resources/features/fieldsValidations.feature:69"
+          }
+        ]
+      }
+    ]
+  }
+]
